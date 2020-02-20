@@ -298,17 +298,17 @@ class MessagesApi
             );
         }
         // verify the required parameter 'file' is set
-        if ($file === null || (is_array($file) && count($file) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $file when calling messageSendPost'
-            );
-        }
+//         if ($file === null || (is_array($file) && count($file) === 0)) {
+//             throw new \InvalidArgumentException(
+//                 'Missing the required parameter $file when calling messageSendPost'
+//             );
+//         }
         // verify the required parameter 'url' is set
-        if ($url === null || (is_array($url) && count($url) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $url when calling messageSendPost'
-            );
-        }
+//         if ($url === null || (is_array($url) && count($url) === 0)) {
+//             throw new \InvalidArgumentException(
+//                 'Missing the required parameter $url when calling messageSendPost'
+//             );
+//         }
         // verify the required parameter 'x_auth_token' is set
         if ($x_auth_token === null || (is_array($x_auth_token) && count($x_auth_token) === 0)) {
             throw new \InvalidArgumentException(
@@ -366,7 +366,7 @@ class MessagesApi
         } else {
             $headers = $this->headerSelector->selectHeaders(
                 ['application/json'],
-                ['multipart/form-data']
+                ['application/x-www-form-urlencoded']
             );
         }
 
